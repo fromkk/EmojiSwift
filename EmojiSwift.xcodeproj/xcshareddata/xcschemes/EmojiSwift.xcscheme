@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ADFBF2C71E9900EE007F5DAC"
-               BuildableName = "EmojiSwift.framework"
+               BuildableName = "Emoji.framework"
                BlueprintName = "EmojiSwift"
                ReferencedContainer = "container:EmojiSwift.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADFBF2C71E9900EE007F5DAC"
-            BuildableName = "EmojiSwift.framework"
+            BuildableName = "Emoji.framework"
             BlueprintName = "EmojiSwift"
             ReferencedContainer = "container:EmojiSwift.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADFBF2C71E9900EE007F5DAC"
-            BuildableName = "EmojiSwift.framework"
+            BuildableName = "Emoji.framework"
             BlueprintName = "EmojiSwift"
             ReferencedContainer = "container:EmojiSwift.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADFBF2C71E9900EE007F5DAC"
-            BuildableName = "EmojiSwift.framework"
+            BuildableName = "Emoji.framework"
             BlueprintName = "EmojiSwift"
             ReferencedContainer = "container:EmojiSwift.xcodeproj">
          </BuildableReference>

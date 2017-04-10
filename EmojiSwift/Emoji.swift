@@ -66,7 +66,7 @@ public extension String {
     public var replacedWithEmoji: String {
         let matches: [[String]]
         do {
-            matches = try self.regexp(pattern: ":([a-zA-Z0-9]+):").matches
+            matches = try self.regexp(pattern: ":([a-zA-Z0-9_]+):").matches
             let result: String = matches.reduce(self, { (res: String, currentMatches: [String]) -> String in
                 guard currentMatches.indices.contains(1) else { return res }
                 let matched: String = currentMatches[0]
