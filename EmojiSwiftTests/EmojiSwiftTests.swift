@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import EmojiSwift
+@testable import Emoji
 
 class EmojiSwiftTests: XCTestCase {
     
