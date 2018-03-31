@@ -32,7 +32,7 @@ public class EmojiManager {
             fatalError("json parse failed \(error)")
         }
         
-        return json.flatMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
+        return json.compactMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
             return Emoji(dictionary: dictionary)
         })
     }()
