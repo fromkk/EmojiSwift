@@ -32,7 +32,7 @@ public class EmojiManager {
             fatalError("json parse failed \(error)")
         }
         
-        return json.flatMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
+        return json.compactMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
             return Emoji(dictionary: dictionary)
         })
     }()
@@ -109,7 +109,7 @@ extension String.Regexp {
         let matched: [NSTextCheckingResult] = self.regularExpression.matches(in: self.text, options: [], range: self.text.nsRange)
         return matched.map { (textCheckingResult: NSTextCheckingResult) -> [String] in
             return (0..<textCheckingResult.numberOfRanges).map({ (i: Int) -> String in
-                return (self.text as NSString).substring(with: textCheckingResult.rangeAt(i))
+                return (self.text as NSString).substring(with: textCheckingResult.range(at: i))
             })
         }
     }
