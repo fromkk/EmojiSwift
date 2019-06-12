@@ -63,7 +63,7 @@ public struct Emoji {
 }
 
 public extension String {
-    public var replacedWithEmoji: String {
+    var replacedWithEmoji: String {
         let matches: [[String]]
         do {
             matches = try self.regexp(pattern: ":([a-zA-Z0-9_]+):").matches
