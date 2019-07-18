@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/fromkk/EmojiSwift.svg?branch=master)](https://travis-ci.org/fromkk/EmojiSwift)
+[![Build Status](https://app.bitrise.io/app/668936343b90d479/status.svg?token=_RFPaI8fV9TLEkud1_wr0A&branch=master)](https://app.bitrise.io/app/668936343b90d479)
 
 # EmojiSwift
 
