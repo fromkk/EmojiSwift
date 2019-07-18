@@ -9,5 +9,5 @@ let result: String = text.replacedWithEmoji
 print(result)
 
 let emojiKeywords: [String] = { () -> [String] in
-    return "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_:".characters.map { return String($0) }
+    return "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_:".map { return String($0) }
 }()

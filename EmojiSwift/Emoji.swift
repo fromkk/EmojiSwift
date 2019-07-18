@@ -32,7 +32,7 @@ public class EmojiManager {
             fatalError("json parse failed \(error)")
         }
         
-        return json.flatMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
+        return json.compactMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
             return Emoji(dictionary: dictionary)
         })
     }()
@@ -63,7 +63,7 @@ public struct Emoji {
 }
 
 public extension String {
-    public var replacedWithEmoji: String {
+    var replacedWithEmoji: String {
         let matches: [[String]]
         do {
             matches = try self.regexp(pattern: ":([a-zA-Z0-9_]+):").matches
