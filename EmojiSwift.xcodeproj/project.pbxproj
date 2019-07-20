@@ -64,7 +64,6 @@
 		ADFBF2BC1E9900AF007F5DAC = {
 			isa = PBXGroup;
 			children = (
-				ADFBF2E21E9901D8007F5DAC /* Resources */,
 				ADFBF2CA1E9900EE007F5DAC /* EmojiSwift */,
 				ADFBF2D51E9900EF007F5DAC /* EmojiSwiftTests */,
 				ADFBF2C91E9900EE007F5DAC /* Products */,
@@ -84,6 +83,7 @@
 		ADFBF2CA1E9900EE007F5DAC /* EmojiSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AD5E423D22E2E592009EC7E5 /* emojiJson.swift */,
 				ADFBF2CB1E9900EE007F5DAC /* EmojiSwift.h */,
 				ADFBF2CC1E9900EE007F5DAC /* Info.plist */,
 				ADFBF2E01E9900FA007F5DAC /* Emoji.swift */,
@@ -98,14 +98,6 @@
 				ADFBF2D81E9900EF007F5DAC /* Info.plist */,
 			);
 			path = EmojiSwiftTests;
-			sourceTree = "<group>";
-		};
-		ADFBF2E21E9901D8007F5DAC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AD5E423D22E2E592009EC7E5 /* emojiJson.swift */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
