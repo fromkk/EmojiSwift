@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AD332422206FAC8E0026F0DA /* Emoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFBF2C81E9900EE007F5DAC /* Emoji.framework */; };
+		AD5E423E22E2E592009EC7E5 /* emojiJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E423D22E2E592009EC7E5 /* emojiJson.swift */; };
 		ADFBF2D71E9900EF007F5DAC /* EmojiSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF2D61E9900EF007F5DAC /* EmojiSwiftTests.swift */; };
 		ADFBF2D91E9900EF007F5DAC /* EmojiSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFBF2CB1E9900EE007F5DAC /* EmojiSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADFBF2E11E9900FA007F5DAC /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF2E01E9900FA007F5DAC /* Emoji.swift */; };
-		ADFBF2E41E99020E007F5DAC /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = ADFBF2E31E99020E007F5DAC /* emoji.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD5E423D22E2E592009EC7E5 /* emojiJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emojiJson.swift; sourceTree = "<group>"; };
 		ADFBF2C81E9900EE007F5DAC /* Emoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Emoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFBF2CB1E9900EE007F5DAC /* EmojiSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiSwift.h; sourceTree = "<group>"; };
 		ADFBF2CC1E9900EE007F5DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		ADFBF2D61E9900EF007F5DAC /* EmojiSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSwiftTests.swift; sourceTree = "<group>"; };
 		ADFBF2D81E9900EF007F5DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADFBF2E01E9900FA007F5DAC /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
-		ADFBF2E31E99020E007F5DAC /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		ADFBF2E21E9901D8007F5DAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ADFBF2E31E99020E007F5DAC /* emoji.json */,
+				AD5E423D22E2E592009EC7E5 /* emojiJson.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADFBF2E41E99020E007F5DAC /* emoji.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5E423E22E2E592009EC7E5 /* emojiJson.swift in Sources */,
 				ADFBF2E11E9900FA007F5DAC /* Emoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

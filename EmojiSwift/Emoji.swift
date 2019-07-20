@@ -10,56 +10,26 @@ import Foundation
 
 public class EmojiManager {
     public static var emojis: [Emoji] = {
-        guard let url: URL = Bundle(for: EmojiManager.self).url(forResource: "emoji", withExtension: "json") else {
-            fatalError("emoji.json load failed")
-        }
-        
-        let data: Data
+        let data: Data = emojiJson.data(using: .utf8)!
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
-            data = try Data(contentsOf: url)
+            return try jsonDecoder.decode([Emoji].self, from: data)
         } catch {
-            fatalError("json get failed \(error)")
+            print("decode failed \(error)")
+            return []
         }
-        
-        let json: [[AnyHashable: Any]]
-        do {
-            guard let result: [[AnyHashable: Any]] = try JSONSerialization.jsonObject(with: data, options: []) as? [[AnyHashable: Any]] else {
-                fatalError("json convert failed")
-            }
-            
-            json = result
-        } catch {
-            fatalError("json parse failed \(error)")
-        }
-        
-        return json.compactMap({ (dictionary: [AnyHashable : Any]) -> Emoji? in
-            return Emoji(dictionary: dictionary)
-        })
     }()
 }
 
-public struct Emoji {
-    public let emoji: String
+public struct Emoji: Codable {
+    public let emoji: String?
     public let description: String?
     public let category: String?
     public let aliases: [String]?
     public let tags: [String]?
     public let unicodeVersion: String?
     public let iosVersion: String?
-    
-    public init?(dictionary: [AnyHashable: Any]) {
-        guard let emoji: String = dictionary["emoji"] as? String else {
-            return nil
-        }
-        
-        self.emoji = emoji
-        self.description = dictionary["description"] as? String
-        self.category = dictionary["category"] as? String
-        self.aliases = dictionary["aliases"] as? [String]
-        self.tags = dictionary["tags"] as? [String]
-        self.unicodeVersion = dictionary["unicode_version"] as? String
-        self.iosVersion = dictionary["ios_version"] as? String
-    }
 }
 
 public extension String {
@@ -78,7 +48,7 @@ public extension String {
                 }).first else {
                     return res
                 }
-                return res.replacingOccurrences(of: matched, with: emoji.emoji)
+                return res.replacingOccurrences(of: matched, with: emoji.emoji ?? "")
             })
             return result
         } catch {

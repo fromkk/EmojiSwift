@@ -3,6 +3,8 @@
 import UIKit
 import Emoji
 
+print(EmojiManager.emojis)
+
 let text: String = "hello :smile: world :joy: !!!"
 let result: String = text.replacedWithEmoji
 
